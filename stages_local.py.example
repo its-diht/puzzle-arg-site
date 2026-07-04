@@ -1,0 +1,13 @@
+# Copy this file to stages_local.py and fill in real answers/content.
+# stages_local.py is gitignored -- it must never be committed.
+from build import load
+
+# Front page at the site root: (passcode, page HTML, [assets in content/]).
+# Unlock via typed passcode or an entry URL fragment: https://<site>/#<passcode>
+FRONT = ("frontpasscode", load("front.html"), ["qr.png"])
+
+STAGES = [
+    # (answer that unlocks this stage, this stage's raw HTML, [asset filenames in content/])
+    ("firstclue", load("stage1.html"), []),
+    ("secondclue", load("stage2.html"), ["some_image.png", "some_audio.wav"]),
+]

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<meta name="referrer" content="no-referrer">
+<title></title>
+<style>
+  html, body { margin: 0; height: 100%; background: #000; }
+  body {
+    display: flex; align-items: center; justify-content: center;
+    font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    color: #bbb;
+  }
+  #lock-screen { text-align: center; padding: 1.5em; }
+  #lock-screen p.prompt { margin: 0 0 1em; letter-spacing: .18em;
+    text-transform: uppercase; font-size: .8rem; color: #777; }
+  #unlock-form { display: inline-flex; gap: .5em; }
+  #unlock-input {
+    font: inherit; padding: .55em .7em; width: 12em;
+    background: #0d0d0d; border: 1px solid #333; color: #eee; border-radius: 3px;
+    outline: none; text-align: center; letter-spacing: .1em;
+  }
+  #unlock-input:focus { border-color: #666; }
+  #unlock-form button {
+    font: inherit; padding: .55em 1em; cursor: pointer;
+    background: #eee; border: none; color: #111; border-radius: 3px;
+  }
+  #unlock-error { color: #a33; min-height: 1.2em; margin-top: .8em; font-size: .8rem; }
+</style>
+</head>
+<body>
+  <div id="lock-screen">
+    <p class="prompt">enter passcode</p>
+    <form id="unlock-form">
+      <input type="text" id="unlock-input" autocomplete="off" autofocus spellcheck="false">
+      <button type="submit">&rarr;</button>
+    </form>
+    <p id="unlock-error"></p>
+  </div>
+
+  <script id="stage-data" type="application/json">{"salt": "doMvxF6h6xoj5A61NgvLjw==", "iv": "p1u19szOD+buRgRC", "ciphertext": "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", "iterations": 250000}</script>
+  <script src="unlock.js" defer></script>
+</body>
+</html>

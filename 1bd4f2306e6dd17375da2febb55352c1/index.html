@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<meta name="referrer" content="no-referrer">
+<title>Locked</title>
+<style>
+  body { font-family: monospace; max-width: 32em; margin: 4em auto; padding: 0 1em; }
+  #unlock-form { display: flex; gap: .5em; }
+  input[type=text] { flex: 1; font: inherit; padding: .4em; }
+  #unlock-error { color: #b00; min-height: 1.2em; }
+</style>
+</head>
+<body>
+  <div id="lock-screen">
+    <p>This stage is locked. Enter the previous answer to continue.</p>
+    <form id="unlock-form">
+      <input type="text" id="unlock-input" autocomplete="off" autofocus>
+      <button type="submit">Unlock</button>
+    </form>
+    <p id="unlock-error"></p>
+  </div>
+
+  <script id="stage-data" type="application/json">{"salt": "Kj9/EFJ7T/Z29zkVtmLU5Q==", "iv": "G36cryy4dIXFw4Wp", "ciphertext": "Vsk66YNA1GFIJLsxvT+80Elbqapo9GTGtCSH4m7CluQF1z/5zBHjdzgyvOKdHQkf67VcC8aLLELWaoI1FGm037zVsIMUK3ZNpX17oAVV9JxJdc+xDpj8uXIPOnf1K+A1TCZFzROTTJR0yuEUDwvjIkwHBpvOqVrXJd5SP8R3tEg9EWQYBfdopsGgJ1T8Le+szQyeKkUW8FgqDUYxonM0PUfpj8lLZ4G8De2FlD6YMSXWi1cFs82iyLdiWL9OKm35+r69SLR0+I+FyTIjgsBbOYAiQxO8MedW852kmtI/tUs/ucIE88EpU8DzD8eW0f1GR8J8HhATPux8fKTYSWD1jam1aJ8/yuqglGIy+ryYyWXSNxsFAuwo2zU48WiMpOFVdpC94GS+lyp4K8g7h4vh1qyJV8C5PMTjIVmkuiuvYHxlulrfqxwRsnFYm1YXrjfdacjIUXwSUCp2CKEYSN0hY/TA/LwsWagTmXjeoPFjRjor1g1JUzO2dMW/Rf9KeZTE/VQ6uQHtYKkdeyIK/IcDU13/j9eg73ul8w8PholNiuFdqRr0VHGGzhq3iFXXswJwg06XnYkg9EeU3IXA+Orm39X/9g2VCd0Fx61ua1ZtrfMbxmcvekvymyCJ/Pv4l2ky/eRQ+pmB7wxSCETePORbR3kNw8yjp8mrwaCMq4QslVI6eWKxRpwJpDIR3sFRr+JF4jfNlGdEV0/M3Ubc8EuYHGmHZbKZJ7DT52XiF8lC4pbSKJwhW+Jl9BgmtTO8XmThTA5vv0+tVvQP4mvRw6MIMw8IJjZ82/bGswkIZrVSkm64O+lFooXvs8FB+XwDkfdW0jcr9lV5pwS+5vrW2dzhu0OqbT0nhmJ0f0WZ4I5oMYz77/QtuHxFPiUhNfWfTj+yoNZNQzSxIxF+m6IJpMOaigpYo8ByT2kM2rRUW6S1d2eVr3W6IUh8fbCqIDZ6IGxLPhEj", "iterations": 250000}</script>
+  <script src="../unlock.js" defer></script>
+</body>
+</html>

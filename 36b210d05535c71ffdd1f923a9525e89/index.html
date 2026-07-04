@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<meta name="referrer" content="no-referrer">
+<title>Locked</title>
+<style>
+  body { font-family: monospace; max-width: 32em; margin: 4em auto; padding: 0 1em; }
+  #unlock-form { display: flex; gap: .5em; }
+  input[type=text] { flex: 1; font: inherit; padding: .4em; }
+  #unlock-error { color: #b00; min-height: 1.2em; }
+</style>
+</head>
+<body>
+  <div id="lock-screen">
+    <p>This stage is locked. Enter the previous answer to continue.</p>
+    <form id="unlock-form">
+      <input type="text" id="unlock-input" autocomplete="off" autofocus>
+      <button type="submit">Unlock</button>
+    </form>
+    <p id="unlock-error"></p>
+  </div>
+
+  <script id="stage-data" type="application/json">{"salt": "CxwclYXt5OuFFW7Hky4RTQ==", "iv": "8RQN9dPhd4E3E/ms", "ciphertext": "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", "iterations": 250000}</script>
+  <script src="../unlock.js" defer></script>
+</body>
+</html>
